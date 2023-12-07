@@ -32,8 +32,12 @@ def test_find_pets_by_status_data_schema():
     response = get_pets_by_status(status)
     pets = response.json()
     for pet in pets:
-        # Here we would validate all required fields and their types
-        # For example:
         assert "id" in pet, "ID is missing from pet data."
         assert "name" in pet, "Pet name is missing."
         assert "status" in pet and pet["status"] == status, "Status is incorrect."
+        
+# Assuming you have installed Python 3 on your local machine
+# Then install requests and pytest using pip:
+# pip install requests pytest
+# Run test by executing the below command from this file directory:
+# pytest test_find_pets_by_status.py

@@ -1,4 +1,5 @@
-Here's a sample list of test cases that cover the functionality of all the endpoints in the Pet section of the Swagger Petstore API. These test cases would be used by a QA to manually test each endpoint:
+Here's a sample list of test cases that cover the functionality of all the endpoints in the Pet section of the Swagger Petstore API. 
+These test cases would be used by a QA to manually test each endpoint:
 
 **1. POST /pet - Add a new pet to the store**
 
@@ -45,5 +46,3 @@ Here's a sample list of test cases that cover the functionality of all the endpo
 - Verify the response code and content after a successful image upload.
 - Verify that attempting to upload an image for a non-existing petId returns an error.
 - Verify proper error handling when the uploaded file is not an image type.
-
-For a thorough verification of the API functionality, the cases should include different variations of data input, including edge cases, error case validation, and security-based cases. It's also important to assert the results based on the expected outcome documented in the Swagger files.

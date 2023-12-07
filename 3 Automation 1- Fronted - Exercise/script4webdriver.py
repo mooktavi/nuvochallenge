@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# Setup WebDriver (assuming Chrome)
+# Setup WebDriver (I've picked Chrome for the exercise)
 driver = webdriver.Chrome()
 driver.implicitly_wait(10)
 
@@ -38,6 +38,31 @@ try:
 except Exception:
     add_to_cart_button.click()
 
+# NUVOLAR REVIEWER PLEASE READ:
+
+# I haven't had time to finsih it but here you have my clarified and suggested improved scenarios along with a description of how I planned on proceeding from here:
+#
+# Clarified and Improved Scenario Specification
+
+# Objective: 
+# Validate that the Amazon shopping cart updates and displays the correct total price and quantity when items are added and updated in the cart.
+
+# Steps:
+# 1. Navigate to the Amazon homepage (https://www.amazon.com).
+# 2. Search for the term "hats for men".
+# 3. Identify the first hat in the search results and add it to the Cart with a quantity of 2.
+# 4. Go to the Cart and verify that the total price and quantity reflect the addition of 2 hats for men.
+# 5. Return to the homepage and search for "hats for women".
+# 6. Add the first hat in the search results to the Cart with a quantity of 1.
+# 7. Visit the Cart again and check that the total price and quantity are updated correctly.
+# 8. In the Cart, adjust the quantity for the "hats for men" from 2 to 1.
+# 9. Assert that the Cart's total price and quantities reflect this change accurately.
+
+# Improvements:
+# - Specified the objective at the beginning to set context.
+# - Added explicit navigation back to the homepage, to prevent ambiguity.
+# - Included steps to verify cart updates, which improves readability and sets clear expectations for the outcome.
+
 # Step 4: Open cart and assert total price and quantity are correct
 
 # Navigating to the cart would be done here, followed by:
@@ -49,8 +74,7 @@ except Exception:
 
 # Step 5-9: Similar steps follow, altering search terms, finding elements, and making assertions
 
-# Please note this script is an outline. You will need to address potential pop-ups, dynamic element IDs,
-# and variation in layouts. Additionally, ensure proper waits and exception handling are in use.
+# Please note this script is an outline. 
+# I haven't addressed dynamic element IDs, waits or variations in layouts.
 
-# Teardown
 driver.quit()
